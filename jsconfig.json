@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
+      // it doesnt need to write '../../' to import file. using '@' instead of '/../..'
       "@/*": ["./src/*"]
     }
   }
