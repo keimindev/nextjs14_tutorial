@@ -2,23 +2,24 @@ import styles from "./blog.module.css";
 import PostCard from "@/components/postCard/postCard";
 import { getPosts } from "@/lib/data";
 
-// const getData = async () => {
-//   const res = await fetch("http://localhost:3000/api/blog", {next:{revalidate:3600}});
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/blog", {next:{revalidate:3600}});
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 
 const BlogPage = async () => {
 
 
-  // const posts = await getData();
+   const posts = await getData();
 
-  const posts = await getPosts();
+   // data fetch without api
+  //const posts = await getPosts();
 
 
     return (
