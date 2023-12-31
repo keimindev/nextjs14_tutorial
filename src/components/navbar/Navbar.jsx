@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         // git random html name, so it doesn't need to worry a duplocate className
         <div className={styles.container}>
-            <Link href="/" classNae={styles.logo}>MinDev</Link>
+            <Link href="/" className={styles.logo}>MinDev</Link>
             <div>
                 <Links/>
             </div>

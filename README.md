@@ -41,6 +41,28 @@ there are two types of components
 for example, user, chart, logout component are client componenent.
 if you want to change to client component, just add "use client".
 
+### Hydration Error and the Solutions
+sometimes you have to use client side and server side together. and then you will see Error. there are solutions. 
+
+- useState
+- dynamic 
+``` 
+import dynamic from "next/dynamic";
+
+const HydrationTestNoSSR = dynamic(()=>import("@/components/hydrationTest"), {ssr: false})
+``` 
+- suppressHydrationWarning
+
+### Navigation
+- Link (server side)
+- usePathname, useRouter, useSearchParams (client side)
+
+
+### Data Fetching
+If you have a data, you don't need to use api for data fetching. 
+folder: lib 
+
+
 
 
 
